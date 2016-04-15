@@ -10,3 +10,6 @@ _site
 Gemfile.lock
 .bundle/
 vendor/
+
+# backups from emacs
+*~
