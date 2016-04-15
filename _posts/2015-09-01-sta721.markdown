@@ -1,0 +1,10 @@
+---
+layout: post
+title:  "STA 721: Linear Models  Fall 2015"
+date:   2015-08-25 08:43:59
+author: Merlise Clyde
+categories: Teaching
+tags: teaching 
+---
+
+I am teaching Linear Models this fall -  [website](http://stat.duke.edu/courses/Fall15/sta721)

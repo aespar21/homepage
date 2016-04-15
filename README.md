@@ -210,3 +210,225 @@ MIT. See [LICENSE.MD](https://github.com/bencentra/centrarium/blob/master/LICENS
 [ga]: http://www.google.com/analytics/
 [archives]: https://github.com/jekyll/jekyll-archives
 [sitemap]: https://github.com/jekyll/jekyll-sitemap
+
+---
+layout: post
+title:  "Adding Posts in Jekyll"
+date:   2012-04-18 08:43:59
+author: Merlise Clyde
+categories: Software
+tags:	Jekyll
+cover:  "/assets/instacode.png"
+---
+
+You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+
+## Adding New Posts
+
+To add new posts, simply add a file in the `_posts` directory that follows the convention `YYYY-MM-DD-name-of-post.ext` and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.
+
+### Tags and Categories
+
+If you list one or more categories or tags in the front matter of your post, they will be included with the post on the page as links. Clicking the link will bring you to an auto-generated archive page for the category or tag, created using the [jekyll-archive][jekyll-archive] gem.
+
+### Cover Images
+
+To add a cover image to your post, set the "cover" property in the front matter with the relative URL of the image (i.e. <code>cover: "/assets/cover_image.jpg"</code>).
+
+### Code Snippets
+
+You can use [highlight.js][highlight] to add syntax highlight code snippets:
+
+Use the [Liquid][liquid] `{% raw %}{% highlight <language> %}{% endraw %}` tag to add syntax highlighting to code snippets.
+
+For instance, this template...
+{% highlight html %}
+{% raw %}{% highlight javascript %}    
+function demo(string, times) {    
+  for (var i = 0; i < times; i++) {    
+    console.log(string);    
+  }    
+}    
+demo("hello, world!", 10);
+{% endhighlight %}{% endraw %}
+{% endhighlight %}
+
+...will come out looking like this:
+
+{% highlight javascript %}
+function demo(string, times) {
+  for (var i = 0; i < times; i++) {
+    console.log(string);
+  }
+}
+demo("hello, world!", 10);
+{% endhighlight %}
+
+Syntax highlighting is done using [highlight.js][highlight]. You can change the active theme in [head.html](https://github.com/bencentra/centrarium/blob/2dcd73d09e104c3798202b0e14c1db9fa6e77bc7/_includes/head.html#L15).
+
+### Images
+
+Lightbox has been enabled for images. To create the link that'll launch the lightbox, add <code>data-lightbox</code> and <code>data-title</code> attributes to an <code>&lt;a&gt;</code> tag around your <code>&lt;img&gt;</code> tag. The result is:
+
+<a href="//bencentra.com/assets/images/falcon9_large.jpg" data-lightbox="falcon9-large" data-title="Check out the Falcon 9 from SpaceX">
+  <img src="//bencentra.com/assets/images/falcon9_small.jpg" title="Check out the Falcon 9 from SpaceX">
+</a>
+
+For more information, check out the [Lightbox][lightbox] website.
+
+---
+layout: page
+title: Help
+permalink: /Help/
+---
+
+<p>The purpose of this HTML is to help determine what default settings are with Bitters and to make sure that all possible HTML Elements are included in this HTML so as to not miss any possible Elements when designing a site.</p>
+
+<hr>
+
+<h1 id="headings">Headings</h1>
+
+<h1>h1. Heading</h1>
+<h2>h2. Heading</h2>
+<h3>h3. Heading</h3>
+<h4>h4. Heading</h4>
+<h5>h5. Heading</h5>
+<h6>h6. Heading</h6>
+
+<hr>
+
+<h1 id="paragraph">Paragraph</h1>
+
+<p>Lorem ipsum dolor sit amet, <a href="#" title="test link">test link</a> adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+
+<p>Lorem ipsum dolor sit amet, <em>emphasis</em> consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus. Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.</p>
+
+<hr>
+
+<h1 id="list_types">List Types</h1>
+
+<p>Lists are unstyled by defualt. To restore the original styling, add the <code>.default</code> class</p>
+
+<h3>Definition List</h3>
+<dl>
+  <dt>Definition List Title</dt>
+  <dd>This is a definition list division.</dd>
+</dl>
+
+<h3>Ordered List</h3>
+<ol>
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ol>
+
+<h3>Unordered List</h3>
+<ul>
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ul>
+
+<h3>Ordered List with <code>.default</code> class</h3>
+<ol class="default">
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ol>
+
+<h3>Unordered List with <code>.default</code> class</h3>
+<ul class="default">
+  <li>List Item 1</li>
+  <li>List Item 2</li>
+  <li>List Item 3</li>
+</ul>
+
+<hr>
+
+<h1 id="form_elements">Fieldsets and Form Elements</h1>
+
+<fieldset>
+  <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.</p>
+
+  <form>
+    <h2>Form Element</h2>
+
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam dignissim convallis est. Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.</p>
+
+    <p><label for="text_field">Text Field:</label>
+      <input type="text" id="text_field" /></p>
+
+    <p><label for="text_area">Text Area:</label>
+      <textarea id="text_area"></textarea></p>
+
+    <p><label for="select_element">Select Element:</label>
+      <select name="select_element">
+        <optgroup label="Option Group 1">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </optgroup>
+        <optgroup label="Option Group 2">
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+        </optgroup>
+    </select></p>
+
+    <p><label for="radio_buttons">Radio Buttons:</label>
+      <label>
+        <input type="radio" class="radio" name="radio_button" value="radio_1" /> Radio 1
+      </label>
+      <label>
+        <input type="radio" class="radio" name="radio_button" value="radio_2" /> Radio 2
+      </label>
+      <label>
+        <input type="radio" class="radio" name="radio_button" value="radio_3" /> Radio 3
+      </label>
+    </p>
+
+    <p><label for="checkboxes">Checkboxes:</label>
+      <label>
+        <input type="checkbox" class="checkbox" name="checkboxes" value="check_1" /> Checkbox 1
+      </label>
+      <label>
+        <input type="checkbox" class="checkbox" name="checkboxes" value="check_2" /> Checkbox 2
+      </label>
+      <label>
+        <input type="checkbox" class="checkbox" name="checkboxes" value="check_3" /> Checkbox 3
+      </label>
+    </p>
+
+    <p><label for="password">Password:</label>
+      <input type="password" class="password" name="password" />
+    </p>
+
+    <p><label for="file">File Input:</label>
+      <input type="file" class="file" name="file" />
+    </p>
+
+
+    <p><input type="submit" value="Submit" /></p>
+  </form>
+</fieldset>
+
+<hr>
+
+<h1 id="tables">Tables</h1>
+
+<table cellspacing="0" cellpadding="0">
+  <tr>
+    <th>Table Header 1</th><th>Table Header 2</th><th>Table Header 3</th>
+  </tr>
+  <tr>
+    <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+  </tr>
+  <tr class="even">
+    <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+  </tr>
+  <tr>
+    <td>Division 1</td><td>Division 2</td><td>Division 3</td>
+  </tr>
+</table>
+
+

@@ -1,0 +1,23 @@
+
+<h2> Published Research</h2>
+
+(<i>Titles link to the Scholars at Duke Repository, while DOIs link to
+ the  publisher's site if available.  Not all publications may be
+ listed here.  Let me know if you cannot find something!</i>)
+<br>
+<br>
+
+<ul class="default"> 
+
+{% for row in site.data.publications %}
+<li>{{row.attributes.apaCitation}} 
+    <a href="http://doi.org/{{row.attributes.doi}}">
+    {{row.attributes.doi}} </a> <br>
+</li>
+ <br>
+{% endfor %}
+</ul>
+
+
+
+

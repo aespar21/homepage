@@ -1,0 +1,40 @@
+
+<h2> Publications</h2>
+
+(<i> Titles link the Scholars at Duke Repository, while DOIs link to
+  publisher sites</i>)
+<br>
+<br>
+
+<ul class="default"> 
+
+{% for row in site.data.publications %}
+<li>{{row.attributes.apaCitation}} 
+    <a href="http://doi.org/{{row.attributes.doi}}">
+    {{row.attributes.doi}} </a> <br>
+</li>
+ <br>
+{% endfor %}
+</ul>
+
+
+<table style="font-size:100%" width="100%">
+<thead>
+<tr>
+    <th width="95%" align="left">Article</th>
+</tr>
+</thead> 
+
+{% for row in site.data.publications %}
+<tr>
+    <td>{{row.attributes.apaCitation}} <br>
+    {{row.attributes.doi}}</td>
+</tr>
+{% endfor %}
+
+</tbody>
+
+</table>
+
+
+

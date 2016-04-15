@@ -1,6 +1,8 @@
 ---
 layout: default
 ---
+
+
 <div class="home">
 
 <div class="site-header-container {% if site.cover %}has-cover{% endif %}" {% if site.cover %}style="background-image: url({{ site.cover | prepend: site.baseurl }});"{% endif %}>
@@ -13,7 +15,61 @@ layout: default
 </div>
 
 <div class="wrapper">
-<ul class="post-list">
+<p>
+I am a Professor of <a href="http://stat.duke.edu">Statistical
+Science</a> at <a href="http://duke.edu"> Duke University</a>
+and have served as Chair of the Department of Statistical Science at
+Duke since 2013. I received my PhD in 1993 from the University of
+Minnesota and joined the faculty at the Institute of Statistics and
+Decision Sciences (now the Department of Statistical Sciences) at Duke
+University in the fall of 1993. I am a past President of
+the <a href="http://bayesian.org">International Society of Bayesian Analysis</a>
+(ISBA), and  an elected Fellow of ISBA and the American Statistical
+Association. My research focuses on Bayesian solutions
+to the related problems of feature/variable selection, model selection
+and prediction using an ensemble of models to account for model
+uncertainty using Bayesian Model Averaging, with an emphasis on prior
+choice and computation.
+
+</p>
+
+<p>
+I have developed several R packages to support research in BMA,
+including <a href="https://cran.r-project.org/web/packages/BAS/index.html">
+    BAS </a>,
+Bayesian Adaptive Sampling for Bayesian Model Averaging. My work is
+inspired by applications in environmental health, chemistry, genomics,
+neuroscience and astronomy, among others.
+</p>
+
+<p>
+In my free time, I enjoy time with my family,
+<a href="{{ site.baseurl  }}/assets/cassiopeia.jpg"
+			    data-lightbox="cassipeia"
+			    data-title="Cassiopeia on the Pamlico
+			    Sound, NC"> sailing </a>, puttering in the garden,
+growing orchids, photography, and exploring the Durham food scene and
+cooking!
+</p>
+
+<br>
+<div style="text-align:center">
+       <a data-pin-do="embedUser" href="https://www.pinterest.com/merliseclyde/"data-pin-scale-width="80" data-pin-scale-height="200" data-pin-board-width="400">    Visit Merlise's profile on Pinterest.</a><!-- Please call pinit.js only once per page --><script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>    
+</div>
+</div>
+
+<div class="wrapper">
+  <div class="page">
+    <span class="page-divider">
+  <span class="one"></span>
+  <span class="two"></span>
+</span>  
+<header class="post-header">
+    <h1 class="post-title">News</h1>
+  </header>
+
+
+  <ul class="post-list">
   {% for post in paginator.posts %}
   <li>
     <h2>
@@ -81,9 +137,9 @@ layout: default
     {% endif %}
   </p>
   <p>
-    <a href="{{ site.baseurl }}/posts">View All Posts by Category</a>
+    <a href="{{ site.baseurl }}/posts">View All News by Category</a>
   </p>
 </nav>
-
+</div>
 </div>
 </div>

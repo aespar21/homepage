@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "BAS Version 1.1.0 Released"
+date:   2016-03-23 08:43:59
+author: Merlise Clyde
+categories: software
+tags:	BAS  news 
+cover:  "/assets/BAS.png"
+---
+
+BAS version 1.1.0 introduces a truncated Beta-Binomial Prior
+distribution on the number of predictors included in a model, <!--excerpt--> which is
+useful for the $$p > n$$ case.  This
+corresponds to a Bernoulli prior on the inclusion indicators $$\gamma_j$$ with a
+common parameter inclusion probability $$\pi$$, and in turn $$\pi$$ is
+assigned a Beta prior distribution with parameters $$a$$ and $$b$$,
+$$\pi \sim B(a,b)$$. The truncated point $$T$$ is
+so that $$P(\sum_j \gamma_j > T) = 0$$ .
+
+
+
+
+For the example, below the number of predictors is constrained to be
+less than or equal to 8.
+
+{% highlight R %}
+library(MASS)
+library(MASS)
+data(UScrime)
+UScrime[,-2] = log(UScrime[,-2])
+crime.bic =  bas.lm(y ~ ., data=UScrime, n.models=2^15, prior="BIC",
+                     modelprior=tr.beta.binomial(1,1,8),
+                     initprobs= "eplogp")
+plot(crime.bic$size, crime.bic$postprobs)
+{% endhighlight %}
+
+The default method for sampling in "BAS" enumerates all models so that
+models with size > 8 have zero probability in the above example.
+Alternatively, we can use the method="MCMC" to avoid sampling models with
+prior probability 0.
+{% highlight R %}
+crime.bic =  bas.lm(y ~ ., data=UScrime, n.models=2^15, prior="BIC",
+                     modelprior=tr.beta.binomial(1,1,8),
+                     method="MCMC", MCMC.iterations=25000)
+plot(crime.bic$size, crime.bic$postprobs)
+{% endhighlight %}
+
+
