@@ -1,0 +1,19 @@
+---
+layout: post
+title:  "BAS has a DOI!"
+date:   2016-08-04 08:43:59
+author: Merlise Clyde
+categories: software
+tags:	BAS  news 
+cover:  "/assets/bma.jpg"
+---
+
+The official [Cousera Bayesian
+Statistics](https://www.coursera.org/learn/bayesian/) release of `BAS`
+version 1.3.0 has a [DOI](http://dx.doi.org/10.5281/zenodo.59497) on Zenoda
+
+  <!--excerpt-->
+[![DOI](https://zenodo.org/badge/doi/10.5281/zenodo.59497.svg)](http://dx.doi.org/10.5281/zenodo.59497)
+
+
+This will be added to the DESCRIPTION file for citations.

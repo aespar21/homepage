@@ -1,0 +1,33 @@
+---
+layout: post
+title:  "BAS Version 1.3.0 Released"
+date:   2016-06-23 08:43:59
+author: Merlise Clyde
+categories: software
+tags:	BAS  news 
+cover:  "/assets/hald-coef.jpeg"
+---
+
+`BAS` version 1.3.0 is being released for the launch of our
+[Cousera Bayesian Statistics](https://www.coursera.org/learn/bayesian/),
+part of the Statistics with R
+specialization. New features include  <!--excerpt-->
+a long awaited vignette with with an exampled carried out illustrating
+the functions, and major updates to the `predict` and `fitted`
+functions, such as identification of the "best predictive model", the 
+model that is closest to model averaging for prediction, standard
+deviations for fitted values and predictions, as well as credible
+intervals using the new `confint` function, based on S3 methods and
+plots for fitted and predicted values as well as coefficients.
+
+
+
+
+{% highlight R %}
+data(Hald)
+hald.ZS = bas.lm(Y ~ ., data=Hald, prior="ZS-null", modelprior=uniform())
+plot(confint(coef(hald.ZS),parm=2:5))
+plot(confint(predict(hald.ZS, se.fit=TRUE), parm="mean"))
+{% endhighlight %}
+
+

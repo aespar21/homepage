@@ -36,8 +36,8 @@ To [cite BAS](https://cran.r-project.org/web/packages/BAS/citation.html) in any 
 
 <iframe src="https://cran.r-project.org/web/packages/BAS/citation.html" width="400px"></iframe>
 
-[github]: https://github.com/merliseclyde/BAS
-[R CRAN]: https://cran.r-project.org
+
+The DOI for the stable release is [http://dx.doi.org/10.5281/zenodo.59497](http://dx.doi.org/10.5281/zenodo.59497)
 
 <h2>Software News</h2>
 {% assign pagecat = "software" %}
